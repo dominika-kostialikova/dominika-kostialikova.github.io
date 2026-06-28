@@ -27,6 +27,7 @@ body {
   background: var(--bg);
   color: var(--text);
   transition: 0.3s;
+  line-height: 1.6;
 }
 
 .container {
@@ -38,29 +39,32 @@ body {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px 40px;
+  padding: 100px 20px 50px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 44px;
   margin-bottom: 10px;
+  letter-spacing: -1px;
 }
 
 .hero p {
   max-width: 600px;
   margin: auto;
   opacity: 0.8;
+  font-size: 18px;
 }
 
 /* BUTTON */
 .btn {
-  margin-top: 20px;
+  margin-top: 25px;
   display: inline-block;
-  padding: 12px 24px;
+  padding: 12px 26px;
   background: var(--accent);
   color: var(--bg);
   text-decoration: none;
   border-radius: 30px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
@@ -70,34 +74,36 @@ body {
 
 /* SECTION */
 .section {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 22px;
 }
 
-/* CARDS */
+/* GRID */
 .grid {
   display: grid;
   gap: 20px;
 }
 
 .grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* CARD */
 .card {
   background: var(--card);
-  padding: 20px;
-  border-radius: 12px;
+  padding: 22px;
+  border-radius: 14px;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
-  
+
 /* PORTFOLIO */
 .portfolio {
   display: grid;
@@ -105,10 +111,18 @@ body {
   gap: 15px;
 }
 
-.portfolio div {
+.portfolio a {
+  display: block;
+  padding: 20px;
   background: var(--card);
-  height: 150px;
   border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.portfolio a:hover {
+  transform: scale(1.03);
 }
 
 /* TOGGLE */
@@ -125,6 +139,7 @@ footer {
   text-align: center;
   padding: 40px;
   opacity: 0.6;
+  font-size: 14px;
 }
 </style>
 
@@ -137,9 +152,9 @@ footer {
 <div class="hero">
   <h1>Dominika Koštialiková</h1>
   <p>
-    Journalist & PR Specialist creating content across media, digital platforms, and public communication.
+    Journalist and PR Specialist focused on media, storytelling, and communication strategy across digital and traditional platforms.
   </p>
-  <a class="btn" href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/">Connect on LinkedIn</a>
+  <a class="btn" href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/" target="_blank">Connect on LinkedIn</a>
 </div>
 
 <div class="container">
@@ -149,11 +164,11 @@ footer {
   <div class="section">
     <h2>About</h2>
     <p>
-      I am a journalist and communication professional with experience in media, content creation, and public relations.
-      My background includes working as an editor covering business and economy, combined with hands-on experience in digital publishing and social media.
+      I am a journalist and communication professional with a background in editorial work, digital publishing, and public relations.
+      My experience combines writing, content creation, and media collaboration across both traditional and online platforms.
     </p>
     <p>
-      Currently, I work as a Territory PR Specialist at ESET, focusing on media relations, communication strategy, and brand visibility.
+      I currently work in PR at ESET, where I focus on communication strategy, media relations, and strengthening brand visibility across territories.
     </p>
   </div>
 
@@ -166,20 +181,26 @@ footer {
 ```
   <div class="card">
     <strong>Territory PR Specialist – ESET</strong><br>
-    <em>2022 – Present</em>
-    <p>Public relations, communication strategy, and media collaboration.</p>
+    <em>Sep 2022 – Present</em>
+    <p>
+      Managing public relations activities, media communication, and supporting brand visibility across multiple markets.
+    </p>
   </div>
 
   <div class="card">
     <strong>Editor – HN Finweb</strong><br>
     <em>2019 – Present</em>
-    <p>Writing and editing business-focused articles, managing content and distribution.</p>
+    <p>
+      Writing and editing articles focused on business, economy, and current affairs. Responsible for content quality and publishing.
+    </p>
   </div>
 
   <div class="card">
-    <strong>Administrative & Customer Roles</strong><br>
-    <em>London</em>
-    <p>Experience in administration, operations, and team leadership.</p>
+    <strong>Administrative & Operational Roles – London</strong><br>
+    <em>2013 – 2017</em>
+    <p>
+      Experience in administration, customer communication, and team coordination in an international environment.
+    </p>
   </div>
 
 </div>
@@ -194,11 +215,38 @@ footer {
     <div class="grid grid-2">
       <div class="card">Journalism & Writing</div>
       <div class="card">Public Relations</div>
-      <div class="card">Content Creation</div>
       <div class="card">Media Communication</div>
-      <div class="card">WordPress & CMS</div>
+      <div class="card">Content Creation</div>
+      <div class="card">Digital Publishing (CMS, WordPress)</div>
       <div class="card">Research & Storytelling</div>
     </div>
+  </div>
+
+  <!-- EDUCATION -->
+
+  <div class="section">
+    <h2>Education</h2>
+    <div class="grid grid-2">
+
+```
+  <div class="card">
+    <strong>BA (Hons) Journalism</strong><br>
+    <em>University of the Arts London</em><br>
+    <span>2017 – 2019</span>
+    <p style="margin-top:10px;">
+      Focus on multimedia journalism, digital storytelling, and media production.
+    </p>
+  </div>
+
+  <div class="card">
+    <strong>Journalism Studies</strong><br>
+    <em>Ružomberok University</em><br>
+    <span>2010 – 2013</span>
+  </div>
+
+</div>
+```
+
   </div>
 
   <!-- PORTFOLIO -->
@@ -206,13 +254,13 @@ footer {
   <div class="section">
     <h2>Portfolio</h2>
     <div class="portfolio">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <a href="#">Article / Project 1</a>
+      <a href="#">Article / Project 2</a>
+      <a href="#">Article / Project 3</a>
+      <a href="#">Article / Project 4</a>
     </div>
     <p style="margin-top:15px;">
-      Add links or screenshots of your articles here to showcase your work.
+      Replace these with links to your published articles or PR work.
     </p>
   </div>
 
@@ -221,8 +269,8 @@ footer {
   <div class="section">
     <h2>Contact</h2>
     <p>
-      dkostialikova@gmail.com<br>
-      <a href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/">LinkedIn</a>
+      dkostialikova@gmail.com<br><br>
+      <a href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/" target="_blank">LinkedIn</a>
     </p>
   </div>
 
