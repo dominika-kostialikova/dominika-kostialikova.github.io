@@ -1,143 +1,236 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dominika Koštialiková | CV</title>
+<title>Dominika Koštialiková</title>
 
 <style>
 :root {
   --bg: #ffffff;
-  --text: #222;
-  --accent: #6c63ff;
+  --text: #111;
+  --accent: #000;
+  --card: #f5f5f5;
 }
 
-body.dark {
-  --bg: #121212;
+.dark {
+  --bg: #0f0f0f;
   --text: #f5f5f5;
+  --accent: #ffffff;
+  --card: #1a1a1a;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: 0.3s;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
-h1, h2 {
-  color: var(--accent);
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
 }
 
-button {
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 24px;
   background: var(--accent);
-  color: white;
-  border-radius: 5px;
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
 }
 
-.toggle {
-  float: right;
+.btn:hover {
+  opacity: 0.8;
 }
 
+/* SECTION */
 .section {
-  margin: 40px 0;
+  margin-top: 60px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .card {
-  padding: 15px;
-  border-radius: 10px;
-  background: rgba(0,0,0,0.05);
-  margin: 10px 0;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
-.gallery {
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* PORTFOLIO */
+.portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
-.gallery img {
-  width: 100%;
+.portfolio div {
+  background: var(--card);
+  height: 150px;
   border-radius: 10px;
 }
 
-a {
-  color: var(--accent);
+/* TOGGLE */
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
 }
 </style>
+
 </head>
 
 <body>
 
+<div class="toggle" onclick="toggleDark()">🌙</div>
+
+<div class="hero">
+  <h1>Dominika Koštialiková</h1>
+  <p>
+    Journalist & PR Specialist creating content across media, digital platforms, and public communication.
+  </p>
+  <a class="btn" href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/">Connect on LinkedIn</a>
+</div>
+
 <div class="container">
 
-<button class="toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+  <!-- ABOUT -->
 
-<h1>Dominika Koštialiková</h1>
-<p>Digital Marketing Specialist | Social Media | Content Creator</p>
+  <div class="section">
+    <h2>About</h2>
+    <p>
+      I am a journalist and communication professional with experience in media, content creation, and public relations.
+      My background includes working as an editor covering business and economy, combined with hands-on experience in digital publishing and social media.
+    </p>
+    <p>
+      Currently, I work as a Territory PR Specialist at ESET, focusing on media relations, communication strategy, and brand visibility.
+    </p>
+  </div>
 
-<div class="section">
-<h2>About Me</h2>
-<p>
-Experienced digital marketing specialist with 10+ years of experience in content creation, 
-social media strategy, and online marketing. Passionate about sharing knowledge and helping brands grow online.
-</p>
-</div>
+  <!-- EXPERIENCE -->
 
-<div class="section">
-<h2>Experience</h2>
+  <div class="section">
+    <h2>Experience</h2>
+    <div class="grid grid-2">
 
-<div class="card">
-<strong>Freelance – Digital Marketing Specialist</strong><br>
-Content marketing, blogging, social media strategy, brand growth.
-</div>
+```
+  <div class="card">
+    <strong>Territory PR Specialist – ESET</strong><br>
+    <em>2022 – Present</em>
+    <p>Public relations, communication strategy, and media collaboration.</p>
+  </div>
 
-<div class="card">
-<strong>Social Media & Content Roles</strong><br>
-Worked with multiple brands, focusing on engagement, campaigns, and digital presence.
-</div>
+  <div class="card">
+    <strong>Editor – HN Finweb</strong><br>
+    <em>2019 – Present</em>
+    <p>Writing and editing business-focused articles, managing content and distribution.</p>
+  </div>
 
-</div>
-
-<div class="section">
-<h2>Skills</h2>
-<div class="card">Social Media Marketing</div>
-<div class="card">Content Creation</div>
-<div class="card">Instagram Strategy</div>
-<div class="card">Digital Marketing</div>
-<div class="card">Brand Building</div>
-</div>
-
-<div class="section">
-<h2>Portfolio</h2>
-
-<div class="gallery">
-<img src="https://via.placeholder.com/300" alt="">
-<img src="https://via.placeholder.com/300" alt="">
-<img src="https://via.placeholder.com/300" alt="">
-</div>
-
-<p>Add your real projects, Instagram campaigns, or case studies here.</p>
-</div>
-
-<div class="section">
-<h2>Contact</h2>
-<p>
-LinkedIn: <a href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/">View Profile</a><br>
-Email: dkostialikova@gmail.com
-</p>
-</div>
+  <div class="card">
+    <strong>Administrative & Customer Roles</strong><br>
+    <em>London</em>
+    <p>Experience in administration, operations, and team leadership.</p>
+  </div>
 
 </div>
+```
+
+  </div>
+
+  <!-- SKILLS -->
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="grid grid-2">
+      <div class="card">Journalism & Writing</div>
+      <div class="card">Public Relations</div>
+      <div class="card">Content Creation</div>
+      <div class="card">Media Communication</div>
+      <div class="card">WordPress & CMS</div>
+      <div class="card">Research & Storytelling</div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+
+  <div class="section">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p style="margin-top:15px;">
+      Add links or screenshots of your articles here to showcase your work.
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>
+      dkostialikova@gmail.com<br>
+      <a href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/">LinkedIn</a>
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Dominika Koštialiková
+</footer>
 
 <script>
 function toggleDark() {
