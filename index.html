@@ -78,9 +78,6 @@
   margin: 0;
   opacity: 0.8;
 }
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
 
 body {
   margin: 0;
@@ -356,7 +353,7 @@ footer {
   <!-- GALLERY -->
 
 <div class="section">
-  <h2>Gallery</h2>
+  <h2>Article Screenshots</h2>
 
   <div class="gallery">
 
@@ -376,37 +373,37 @@ footer {
     </div>
 
     <div class="gallery-item">
-      <img src="images/article4.png" alt="HN Finweb article screenshot">
+      <img src="images/article4.png" alt="HN Finweb article screenshot"onclick="openLightbox(this)">
       <p>Published article – HN Finweb</p>
     </div>
 
   <div class="gallery-item">
-      <img src="images/article5.png" alt="HN Finweb article screenshot">
+      <img src="images/article5.png" alt="HN Finweb article screenshot"onclick="openLightbox(this)">
       <p>Published article – HN Finweb</p>
     </div>
 
    <div class="gallery-item">
-      <img src="images/article6.png" alt="HN Finweb article screenshot">
+      <img src="images/article6.png" alt="HN Finweb article screenshot"onclick="openLightbox(this)">
       <p>Published article – HN Finweb</p>
     </div>
 
    <div class="gallery-item">
-      <img src="images/article7.png" alt="HN Finweb article screenshot">
+      <img src="images/article7.png" alt="HN Finweb article screenshot"onclick="openLightbox(this)">
       <p>Published article – HN Finweb</p>
     </div>
 
      <div class="gallery-item">
-      <img src="images/article8.png" alt="HN Finweb article screenshot">
+      <img src="images/article8.png" alt="HN Finweb article screenshot"onclick="openLightbox(this)">
       <p>Published article – HN Finweb</p>
     </div>
 
    <div class="gallery-item">
-      <img src="images/article9.png" alt="HN Finweb article screenshot">
+      <img src="images/article9.png" alt="HN Finweb article screenshot"onclick="openLightbox(this)">
       <p>Published article – HN Finweb</p>
     </div>
 
    <div class="gallery-item">
-      <img src="images/article10.png" alt="HN Finweb article screenshot">
+      <img src="images/article10.png" alt="HN Finweb article screenshot"onclick="openLightbox(this)">
       <p>Published article – HN Finweb</p>
     </div>
   
@@ -429,9 +426,24 @@ footer {
   © 2026 Dominika Koštialiková
 </footer>
 
+<!-- LIGHTBOX (correct place) -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
 <script>
 function toggleDark() {
   document.body.classList.toggle("dark");
+}
+
+// LIGHTBOX
+function openLightbox(img) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
 }
 </script>
 
