@@ -5,23 +5,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dominika Koštialiková – Journalist & PR Specialist</title>
+<title>Dominika Koštialiková</title>
 
-<meta name="description" content="Dominika Koštialiková is a journalist and PR specialist focusing on business, technology and digital transformation. Portfolio, articles and media work.">
-<meta name="keywords" content="Dominika Kostialikova, journalist portfolio, PR specialist, business journalism, technology journalism, Slovakia media">
-<meta name="author" content="Dominika Koštialiková">
-
-<meta property="og:title" content="Dominika Koštialiková – Journalist & PR Specialist">
-<meta property="og:description" content="Portfolio of articles, PR work and media experience.">
-<meta property="og:image" content="https://dominika-kostialikova.github.io/images/article1.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dominika-kostialikova.github.io/">
+<meta name="description" content="Journalist and PR specialist focusing on business, technology and digital transformation.">
 
 <style>
 :root {
   --bg: #ffffff;
   --text: #111;
-  --muted: #666;
+  --muted: #777;
 }
 
 .dark {
@@ -32,7 +24,7 @@
 
 body {
   margin: 0;
-  font-family: Georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: 0.3s;
@@ -42,75 +34,80 @@ body {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 25px;
+  padding: 30px;
   max-width: 1100px;
   margin: auto;
+  font-size: 14px;
 }
 
 /* HERO */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 60px auto;
-  align-items: center;
+  max-width: 900px;
+  margin: 100px auto 60px;
+  text-align: center;
 }
 
 .hero img {
-  width: 100%;
-  border-radius: 12px;
+  width: 110px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
 .hero p {
+  font-size: 20px;
   color: var(--muted);
 }
 
-/* FEATURED */
-.featured {
-  max-width: 1100px;
+/* SECTION */
+.section {
+  max-width: 900px;
   margin: 80px auto;
 }
 
+/* FEATURED */
 .featured img {
   width: 100%;
   border-radius: 12px;
 }
 
 .featured h2 {
-  font-size: 30px;
+  font-size: 32px;
+  margin-top: 20px;
 }
 
 /* ARTICLES */
-.articles {
-  max-width: 1100px;
-  margin: 80px auto;
-}
-
 .article {
-  margin-bottom: 25px;
+  margin-top: 40px;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1100px;
-  margin: 80px auto;
+.article a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.article h3 {
+  font-size: 22px;
+}
+
+.article p {
+  color: var(--muted);
+}
+
+/* EXPERIENCE */
+.list p {
+  margin-bottom: 20px;
 }
 
 /* GALLERY */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
-  max-width: 1100px;
-  margin: 80px auto;
 }
 
 .gallery img {
@@ -130,13 +127,6 @@ footer {
   padding: 40px;
   color: var(--muted);
 }
-
-/* MOBILE */
-@media(max-width: 800px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-}
 </style>
 
 </head>
@@ -144,115 +134,82 @@ footer {
 <body>
 
 <div class="nav">
-<strong>Dominika Koštialiková</strong>
+<div>Dominika Koštialiková</div>
 <div onclick="toggleDark()">🌙</div>
 </div>
 
 <!-- HERO -->
 
 <div class="hero">
-<div>
-<h1>Dominika Koštialiková</h1>
-<p>I focus on business, technology and digital transformation — translating complex topics into clear, engaging stories. I also work in PR, shaping communication between companies and media.</p>
-<a href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/" target="_blank">LinkedIn →</a>
-</div>
-<img src="photo.jpeg" alt="Dominika Kostialikova portrait">
+<img src="photo.jpeg">
+<h1>Journalist & PR Specialist</h1>
+<p>Covering business, technology and digital transformation through clear, engaging storytelling.</p>
 </div>
 
 <!-- FEATURED -->
 
-<div class="featured">
-<img src="images/article1.png" alt="Accenture 3D internet article">
+<div class="section featured">
+<img src="images/article1.png">
 <h2>How Accenture is Building the 3D Internet</h2>
-<p>Exploring how global companies invest in virtual environments and digital infrastructure.</p>
-<a href="https://hnonline.sk/finweb/ekonomika/27077838" target="_blank">Read article →</a>
+<p>Exploring how global companies invest in virtual environments.</p>
+<a href="https://hnonline.sk/finweb/ekonomika/27077838" target="_blank">Read →</a>
 </div>
 
 <!-- ARTICLES -->
 
-<div class="articles">
-<h2>Selected Work</h2>
-
+<div class="section">
 <div class="article">
-<h3><a href="https://hnonline.sk/finweb/financie-a-burzy/96026783" target="_blank">Crypto Investment Trends →</a></h3>
-<p>Analysis of market trends and investor sentiment.</p>
+<h3><a href="#">Crypto Investment Trends →</a></h3>
+<p>Market analysis and investor sentiment.</p>
 </div>
 
 <div class="article">
-<h3><a href="https://hnonline.sk/finweb/ekonomika/19659481" target="_blank">Economic Crisis Interview →</a></h3>
-<p>Insights into macroeconomic developments.</p>
+<h3><a href="#">Economic Crisis Interview →</a></h3>
+<p>Insights into global economic shifts.</p>
 </div>
-
 </div>
 
 <!-- EXPERIENCE -->
 
-<div class="grid">
-<div>
+<div class="section list">
 <h2>Experience</h2>
 
-<p><strong>ESET</strong><br>Territory PR Specialist<br>2022 – Present</p>
-
-<p><strong>HN Finweb</strong><br>Editor<br>2019 – Present</p>
-
-<p><strong>Artefact Magazine</strong><br>London<br>2018 – 2019</p>
+<p><strong>ESET</strong><br>Territory PR Specialist, 2022–Present</p>
+<p><strong>HN Finweb</strong><br>Editor, 2019–Present</p>
+<p><strong>Artefact Magazine</strong><br>London, 2018–2019</p>
 
 </div>
 
-<div>
+<!-- EDUCATION -->
+
+<div class="section list">
 <h2>Education</h2>
 
 <p><strong>University of the Arts London</strong><br>BA Journalism</p>
-
 <p><strong>Catholic University in Ružomberok</strong><br>Journalism</p>
 
-</div>
 </div>
 
 <!-- GALLERY -->
 
+<div class="section">
 <div class="gallery">
-<img src="images/article1.png" alt="Article screenshot 1">
-<img src="images/article2.png" alt="Article screenshot 2">
-<img src="images/article3.png" alt="Article screenshot 3">
+<img src="images/article1.png">
+<img src="images/article2.png">
+<img src="images/article3.png">
+</div>
 </div>
 
 <!-- CONTACT -->
 
 <div class="contact">
 <h2>Contact</h2>
-<p>For collaborations, media inquiries or opportunities:</p>
-<a href="mailto:your@email.com">your@email.com</a>
+<p>your@email.com</p>
 </div>
-
-<!-- SEO TEXT -->
-
-<p style="max-width:800px;margin:auto;opacity:0.6;text-align:center;">
-Dominika Koštialiková is a journalist and PR specialist focusing on business, technology, and digital transformation. Her work includes reporting on economic trends, innovation, and global markets.
-</p>
 
 <footer>
 © 2026 Dominika Koštialiková
 </footer>
-
-<!-- STRUCTURED DATA -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dominika Koštialiková",
-  "url": "https://dominika-kostialikova.github.io/",
-  "sameAs": [
-    "https://www.linkedin.com/in/dominika-kostialikova-8046036a/"
-  ],
-  "jobTitle": "Journalist and PR Specialist",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "ESET"
-  }
-}
-</script>
 
 <script>
 function toggleDark() {
