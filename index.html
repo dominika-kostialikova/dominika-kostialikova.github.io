@@ -21,67 +21,6 @@
   --card: #1a1a1a;
 }
 
-  .profile-photo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-  .lightbox {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-  /* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.gallery-item {
-  background: var(--card);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-item p {
-  padding: 10px;
-  font-size: 14px;
-  margin: 0;
-  opacity: 0.8;
-}
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -101,17 +40,24 @@ body {
 .hero {
   text-align: center;
   padding: 100px 20px 50px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
   font-size: 44px;
   margin-bottom: 10px;
-  letter-spacing: -1px;
 }
 
 .hero p {
-  max-width: 600px;
-  margin: auto;
   opacity: 0.8;
   font-size: 18px;
 }
@@ -126,7 +72,6 @@ body {
   text-decoration: none;
   border-radius: 30px;
   font-size: 14px;
-  transition: 0.3s;
 }
 
 .btn:hover {
@@ -140,7 +85,6 @@ body {
 
 .section h2 {
   margin-bottom: 25px;
-  font-size: 22px;
 }
 
 /* GRID */
@@ -168,25 +112,72 @@ body {
 /* PORTFOLIO */
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
 }
 
 .portfolio a {
   display: block;
-  padding: 20px;
+  padding: 18px;
   background: var(--card);
   border-radius: 10px;
   text-decoration: none;
   color: var(--text);
-  transition: 0.3s;
 }
 
 .portfolio a:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
-  
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item p {
+  padding: 10px;
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
 
 /* TOGGLE */
 .toggle {
@@ -194,7 +185,6 @@ body {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  font-size: 20px;
 }
 
 /* FOOTER */
@@ -202,7 +192,6 @@ footer {
   text-align: center;
   padding: 40px;
   opacity: 0.6;
-  font-size: 14px;
 }
 </style>
 
@@ -213,228 +202,122 @@ footer {
 <div class="toggle" onclick="toggleDark()">🌙</div>
 
 <div class="hero">
-
-  <img src="photo.jpeg" alt="Dominika Koštialiková" class="profile-photo">
-
+  <img src="photo.jpeg" class="profile-photo">
   <h1>Dominika Koštialiková</h1>
-  <p>
-    Journalist and PR Specialist focused on media, storytelling, and communication strategy across digital and traditional platforms.
-  </p>
-  <a class="btn" href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/" target="_blank">Connect on LinkedIn</a>
+  <p>Journalist and PR Specialist focused on media, storytelling, and communication strategy.</p>
+  <a class="btn" href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/" target="_blank">LinkedIn</a>
 </div>
 
 <div class="container">
 
-  <!-- ABOUT -->
-
-  <div class="section">
-    <h2>About</h2>
-    <p>
-      I am a journalist and communication professional with a background in editorial work, digital publishing, and public relations.
-      My experience combines writing, content creation, and media collaboration across both traditional and online platforms.
-    </p>
-    <p>
-      I currently work in PR at ESET, where I focus on communication strategy, media relations, and strengthening brand visibility across territories.
-    </p>
-  </div>
-
-  <!-- EXPERIENCE -->
-
-  <div class="section">
-    <h2>Experience</h2>
-    <div class="grid grid-2">
-
-  <div class="card">
-    <strong>Territory PR Specialist – ESET</strong><br>
-    <em>Sep 2022 – Present</em>
-    <p>
-      Managing public relations activities, media communication, and supporting brand visibility across strategic markets.
-    </p>
-  </div>
-
-  <div class="card">
-    <strong>Editor – HN Finweb</strong><br>
-    <em>2019 – Present</em>
-    <p>
-      Writing and editing articles focused on business, economy, and current affairs. Responsible for content quality and publishing.
-    </p>
-  </div>
-
-  <div class="card">
-    <strong>Content Editor and Writer - Artefact Magazine</strong><br>
-    <em>Sep 2018 - Apr 2019</em>
-    <p>
-      Writing and editing content for a student publication distributed in London, UK.
-    </p>
-  </div>
-
-  <div class="card">
-    <strong>Administrative & Operational Roles – London</strong><br>
-    <em>2013 – 2017</em>
-    <p>
-      Experience in administration, customer communication, and team coordination in an international environment.
-    </p>
-  </div>
-
+<div class="section">
+<h2>About</h2>
+<p>Journalist and communication professional with experience in editorial work, digital publishing, and public relations.</p>
 </div>
-
-  </div>
-
-  <!-- SKILLS AND CERTIFICATES-->
-
-  <div class="section">
-    <h2>Skills and certificates</h2>
-    <div class="grid grid-2">
-      <div class="card">Journalism & Writing</div>
-      <div class="card">Canva for Work (Credential ID 6b8395)</div>
-      <div class="card">MS Copilot Power User</div>
-      <div class="card">Content Creation for Social Media (Capcut)</div>
-      <div class="card">Digital Publishing (CMS, WordPress)</div>
-      <div class="card">Creative Storytelling</div>
-    </div>
-  </div>
-
-  <!-- LANGUAGE SKILLS -->
-
-  <div class="section">
-    <h2>Language skills</h2>
-    <div class="grid grid-2">
-      <div class="card">English IELTS 7.5/ CEFR C1</div>
-      <div class="card">German B1</div>
-      <div class="card">Slovak (Native)</div>
-    </div>
-  </div>
-
-  <!-- EDUCATION -->
-
-  <div class="section">
-    <h2>Education</h2>
-    <div class="grid grid-2">
-
-  <div class="card">
-    <strong>BA (Hons) Journalism</strong><br>
-    <em>University of the Arts London</em><br>
-    <span>2017 – 2019</span>
-    <p style="margin-top:10px;">
-      Focus on multimedia journalism, digital storytelling, and media production.
-    </p>
-  </div>
-
-      <div class="card">
-    <strong>Median und Kommunikation (Erasmus Student Exchange)</strong><br>
-    <em>Universität Passau</em><br>
-    <span>2012 – 2013</span>
-    <p style="margin-top:10px;">
-      Focus on multimedia journalism, digital storytelling, and media production.
-    </p>
-  </div>
-
-  <div class="card">
-    <strong>Journalism Studies</strong><br>
-    <em>Ružomberok University</em><br>
-    <span>2010 – 2013</span>
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- PORTFOLIO -->
-
-  <div class="section">
-    <h2>Portfolio</h2>
-    <div class="portfolio">
-      <a href="https://hnonline.sk/finweb/ekonomika/27077838-sef-firmy-accenture-ktora-buduje-3d-internet-k-moru-rovno-z-domova-blizime-sa-k-zaujimavejsiemu-svetu">Article 1 </a>
-      <a href="https://hnonline.sk/finweb/financie-a-burzy/96026783-je-teraz-spravny-cas-na-kupu-kryptomien-sef-svetovej-burzy-pre-hn-hovori-ktoru-si-zaobstarat-ako-prvu">Article 2</a>
-      <a href="https://hnonline.sk/finweb/ekonomika/19659481-takuto-situaciu-sme-tu-este-nemali-paniku-vsak-nesmieme-robit-tvrdi-top-ekonom-pre-hn">Article 3</a>
-      <a href="https://hnonline.sk/finweb/ekonomika/12056302-mlady-slovak-predal-aplikaciu-twitteru-toto-nie-si-ty-povedali-mu-blizki-ked-videli-jeho-pracu-pre-facebook">Article 4 </a>
-    </div>
-    <p style="margin-top:15px;">
-    </p>
-  </div>
-
-  <!-- GALLERY -->
 
 <div class="section">
-  <h2>Gallery</h2>
+<h2>Experience</h2>
+<div class="grid grid-2">
 
-  <div class="gallery">
+<div class="card">
+<strong>ESET – Territory PR Specialist</strong><br>
+<em>2022 – Present</em>
+<p>PR strategy, media communication, brand visibility.</p>
+</div>
 
-    <div class="gallery-item">
-      <img src="images/article1.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
+<div class="card">
+<strong>HN Finweb – Editor</strong><br>
+<em>2019 – Present</em>
+<p>Business and economy journalism.</p>
+</div>
+
+<div class="card">
+<strong>Artefact Magazine</strong><br>
+<em>2018 – 2019</em>
+<p>Editorial writing in London.</p>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Skills</h2>
+<div class="grid grid-2">
+<div class="card">Journalism</div>
+<div class="card">PR & Media</div>
+<div class="card">Content Creation</div>
+<div class="card">CMS / WordPress</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Education</h2>
+<div class="grid grid-2">
+
+<div class="card">
+<strong>University of the Arts London</strong><br>
+BA Journalism
+</div>
+
+<div class="card">
+<strong>Ružomberok University</strong><br>
+Journalism
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Portfolio</h2>
+<div class="portfolio">
+
+<a href="https://hnonline.sk/finweb/ekonomika/27077838" target="_blank">
+How Accenture is building the 3D internet
+</a>
+
+<a href="https://hnonline.sk/finweb/financie-a-burzy/96026783" target="_blank">
+Is now the right time to buy crypto?
+</a>
+
+<a href="https://hnonline.sk/finweb/ekonomika/19659481" target="_blank">
+Economic crisis analysis interview
+</a>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Gallery</h2>
+
+<div class="gallery">
 
 <div class="gallery-item">
-      <img src="images/article2.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-
-  <div class="gallery-item">
-      <img src="images/article3.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/article4.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-
-  <div class="gallery-item">
-      <img src="images/article5.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-
-   <div class="gallery-item">
-      <img src="images/article6.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-
-   <div class="gallery-item">
-      <img src="images/article7.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-
-     <div class="gallery-item">
-      <img src="images/article8.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-
-   <div class="gallery-item">
-      <img src="images/article9.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-
-   <div class="gallery-item">
-      <img src="images/article10.png" alt="HN Finweb article screenshot">
-      <p>Published article – HN Finweb</p>
-    </div>
-  
-  </div>
+<img src="images/article1.png" onclick="openLightbox(this)">
+<p>HN Finweb article</p>
 </div>
 
-  <!-- CONTACT -->
-
-  <div class="section">
-    <h2>Contact</h2>
-    <p>
-      dkostialikova@gmail.com<br><br>
-      <a href="https://www.linkedin.com/in/dominika-kostialikova-8046036a/" target="_blank">LinkedIn</a>
-    </p>
-  </div>
+<div class="gallery-item">
+<img src="images/article2.png" onclick="openLightbox(this)">
+<p>HN Finweb article</p>
+</div>
 
 </div>
 
-<footer>
-  © 2026 Dominika Koštialiková
-</footer>
+</div>
+
+</div>
+
+<footer>© 2026 Dominika Koštialiková</footer>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
+</div>
 
 <script>
 function toggleDark() {
   document.body.classList.toggle("dark");
 }
 
-// LIGHTBOX
 function openLightbox(img) {
   document.getElementById("lightbox").style.display = "flex";
   document.getElementById("lightbox-img").src = img.src;
